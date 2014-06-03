@@ -5,8 +5,13 @@ body {
     background: url('../images/desk-texture.jpg') no-repeat center center fixed;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-size: cover;
+    /*overflow: hidden;*/
 }
-
+.addTask {
+    position: absolute;
+    margin-top: 133px;
+    margin-left: 39px;
+}
 .note-container {
     position: relative;
     
@@ -16,17 +21,35 @@ body {
     position: absolute;
     }
 
-    div {
+    .notes {
         width: 400px;
         height: 609px;
-        /*background-color: blue;*/
         position: absolute;
         margin-top: 149px;
-        margin-left: 72px;
+        /*margin-left: 72px;*/
         line-height: 28px;
+        /*background-color: blue;*/
 
     }
 }
+
+.button {
+    display: inline-block;
+    background: url('../images/eraser-small.png') no-repeat center center ;
+    float: right;
+    width: 60px;
+    height: 24px;
+    font-family: 'Cookie', Helvetica, sans-serif;
+    font-color: black;
+    text-align: center;
+    font-size: 22px;
+    margin: 2px;
+}
+
+.notes {
+    display: inline-block;
+}
+
 
 
 
