@@ -26,17 +26,21 @@ body {
         height: 609px;
         position: absolute;
         margin-top: 149px;
-        /*margin-left: 72px;*/
+        margin-left: 72px;
         line-height: 28px;
         /*background-color: blue;*/
 
     }
 }
+.button-container {
+    display: inline-block;
+    /*position: absolute;*/
+}
 
 .button {
+    float: right;
     display: inline-block;
     background: url('../images/eraser-small.png') no-repeat center center ;
-    float: right;
     width: 60px;
     height: 24px;
     font-family: 'Cookie', Helvetica, sans-serif;
