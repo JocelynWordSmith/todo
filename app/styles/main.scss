@@ -5,15 +5,21 @@ body {
     background: url('../images/desk-texture.jpg') no-repeat center center fixed;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-size: cover;
-    /*overflow: hidden;*/
+    overflow: scroll;
 }
-.addTask {
+.add-task {
     position: absolute;
     margin-top: 133px;
     margin-left: 39px;
 }
+.new-todo {
+    position: absolute;
+    margin-top: 132px;
+    margin-left: 75px;
+}
 .note-container {
     position: relative;
+    width: 474px;
     
     img {
     width: 472px;

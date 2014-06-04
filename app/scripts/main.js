@@ -4,18 +4,23 @@
 var Todo = Backbone.Model.extend({
 
 	initialize: function() {
+		this.set({ 
+			task: $('.new-todo').val()
 
+		})
 	},
 
 	//default fields for color
 	defaults: {
 
 		user: 'joshua',
-		task: 'huslte, every day',
+		task:  'hustle, every day',
 		done: false,
 		color: 'black',
 
 	},
+
+	url: 'http://tiny-pizza-server.herokuapp.com/collections/joshua-todo',
 
 	//tells it that the id has a leading underscore 
 	idAttribute: '_id',
@@ -71,13 +76,17 @@ newTask.fetch().done(function() {
 		});
 	});
 });
-var testTask;
+
 $('.add-task').click(function() {
-	testTask = new Todos();
-	testTask.set({
-		user: 'joshua',
-		task: 'huslte, every day',
-		done: false,
-		color: 'black',
+	window.testTask = new Todo();
+	console.log(testTask);
+	testTask.save();
+	$('.notes').html('');
+newTask.fetch().done(function() {
+	newTask.each(function(todo) {
+		new TodoList({
+			model: todo
+		});
 	});
+});
 });
